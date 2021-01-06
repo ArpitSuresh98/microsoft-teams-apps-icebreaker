@@ -163,6 +163,17 @@
             "metadata": {
               "description": "The branch of the GitHub repository to deploy."
             }
+        },
+	      "defaultLocale": {
+            "type": "string",
+            "allowedValues": [
+              "en-US",
+              "fr-FR",
+              "es-MX",
+              "ar-SA",
+              "ja-JP"
+	          ],
+	          "defaultValue": "en-US"
         }
     },
     "variables": {
@@ -319,6 +330,10 @@
                         {
                             "name": "WEBSITE_NODE_DEFAULT_VERSION",
                             "value": "8.9.4"
+                        },
+                        {
+                          "name": "DefaultLocale",
+                          "value": "[variables('defaultLocale')]"
                         }
                     ]
                 },
